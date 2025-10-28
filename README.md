@@ -13,7 +13,8 @@ NUS 18th STEPs Page - https://uvents.nus.edu.sg/event/18th-steps/module/CS4240/p
 Youtube Trailer - https://www.youtube.com/watch?v=jmCed4jUGlE
 
 ## Platform
-Best run on Oculus Quest / Oculus Quest 2.
+- **VR Mode**: Oculus Quest / Oculus Quest 2
+- **PC Mode**: Windows with Keyboard & Mouse (NEW!)
 
 ## Unity Editor Version
 2021.1.0f1 preferred. If you are using 2020.2, you can try and let us know if there are bugs during setup.
@@ -40,7 +41,25 @@ B - Teleport <br/>
 TRIGGER + GRIP - Grab <br/>
 Left Joystick button - Move <br/>
 
+## Controls (PC - Keyboard & Mouse)
+**Movement:**
+- W/A/S/D - Move
+- Mouse - Look around
+- Left Shift - Run
+- Space - Jump
+- ESC - Toggle cursor lock
+
+**Interaction:**
+- Left Mouse Button - Pick up / Drop object
+- Right Mouse Button - Use tool (Dig with spade, Pour with watering can)
+- E - Interact (future use)
+
+**UI:**
+- Left Mouse Button - Click buttons and quiz answers
+
 ## Game Play Instructions
+
+### For VR (Oculus Quest):
 <ol>
 <li>Your starting point will be the play area that is clearly marked with the fence.
 The player can move via teleportation within this area. To teleport, press the B button and point to an area to teleport. You can also move via pushing the joystick button 8 on the left hand.</li>
@@ -52,6 +71,28 @@ The player can move via teleportation within this area. To teleport, press the B
 <li>Each plot of land corresponds to the growth of a plant. Light Brown Soil (Sandy Clay Loam Soil) is for Tomato. Dark Brown Soil (Well-drained Soil) is for Chilli. Observe what happens when you follow the instructions.</li> 
 
 <li>Enjoy and leave us feedback :-)</li>
+</ol>
+
+### For PC (Keyboard & Mouse):
+<ol>
+<li>You start at the farm area. Use WASD to move around and mouse to look. Hold Shift to run faster.</li>
+
+<li>Follow the instructions on the signboard. Look at farming tools on the table and left-click to pick them up. The tool will follow your view when held.</li>
+
+<li>Detailed Steps: 
+   - Look at the short spade and left-click to pick it up
+   - Look at dirt mound and hold right-click to dig (do this twice to make a hole)
+   - Drop the spade (left-click) and pick up seed bag
+   - Look at the hole and left-click to drop seeds
+   - Pick up the spade again and right-click on the hole to cover it
+   - Pick up the watering can and hold right-click to pour water until the bar is filled
+   - Wait for the plant to grow
+   - When fully grown, left-click to harvest
+   - Head to the Quiz Area and click on answers with your mouse!</li>
+
+<li>Each plot of land corresponds to the growth of a plant. Light Brown Soil (Sandy Clay Loam Soil) is for Tomato. Dark Brown Soil (Well-drained Soil) is for Chilli. Observe what happens when you follow the instructions.</li>
+
+<li>Press ESC if you need to unlock your cursor. Enjoy farming! :-)</li>
 </ol>
 
 ![syyENUv](https://user-images.githubusercontent.com/7495242/114736017-51445080-9d78-11eb-84ab-12ce8a27377c.png)

@@ -1,0 +1,57 @@
+// Quick Setup Instructions for PCPlayer Spawn Point
+
+SPAWN POSITION SETTINGS:
+========================
+
+PCPlayer Transform Position:
+- X: 549.151
+- Y: 1.6 (EYE HEIGHT - CHANGE THIS!)
+- Z: 472.24
+
+PCPlayer Rotation:
+- X: 0
+- Y: -70.3 (current rotation - keeps you facing the farm)
+- Z: 0
+
+REQUIRED FIXES:
+===============
+
+1. Character Controller:
+   ✓ Already configured correctly
+
+2. PC Player Controller (Script):
+   - Ground Mask: Change from "Nothing" to "Default" ⚠️
+   - Camera Transform: Should point to → PCCamera
+   - Ground Check: Should point to → GroundCheck
+   - Ground Distance: 0.4
+
+3. PC Interaction Controller (Script):
+   ✓ Present
+
+STEPS:
+======
+
+1. STOP Play Mode (if running)
+
+2. Select PCPlayer in Hierarchy
+
+3. In Transform, change Y position:
+   From: 0.0799
+   To: 1.6
+
+4. In PC Player Controller script:
+   - Click "Ground Mask" dropdown
+   - Select "Default" (or "Everything")
+
+5. Verify Camera Transform and Ground Check are assigned
+
+6. Press PLAY
+
+7. You should spawn at this exact location!
+
+CONTROLS:
+=========
+- WASD: Move
+- Mouse: Look
+- Shift: Run
+- ESC: Show cursor

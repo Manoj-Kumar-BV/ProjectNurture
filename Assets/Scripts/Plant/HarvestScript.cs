@@ -10,11 +10,43 @@ public class HarvestScript : MonoBehaviour
 
     void Start()
     {
-        onGrab = gameObject.GetComponent<Autohand.Grabbable>().onGrab;
-        onGrab.AddListener(OnGrab);
+        // Check if we're in VR mode (AutoHand available)
+        var autohandGrabbable = gameObject.GetComponent<Autohand.Grabbable>();
+        
+        if (autohandGrabbable != null)
+        {
+            // VR Mode - use AutoHand events
+            onGrab = autohandGrabbable.onGrab;
+            onGrab.AddListener(OnGrab);
 
-        onRelease = gameObject.GetComponent<Autohand.Grabbable>().onRelease;
-        onRelease.AddListener(OnRelease);
+            onRelease = autohandGrabbable.onRelease;
+            onRelease.AddListener(OnRelease);
+        }
+        else
+        {
+            // PC Mode - use PCGrabbableAdapter or create events
+            var pcGrabbable = gameObject.GetComponent<PCGrabbableAdapter>();
+            if (pcGrabbable == null)
+            {
+                pcGrabbable = gameObject.AddComponent<PCGrabbableAdapter>();
+            }
+
+            onGrab = pcGrabbable.onGrab;
+            if (onGrab == null)
+            {
+                onGrab = new UnityEvent();
+                pcGrabbable.onGrab = onGrab;
+            }
+            onGrab.AddListener(OnGrab);
+
+            onRelease = pcGrabbable.onRelease;
+            if (onRelease == null)
+            {
+                onRelease = new UnityEvent();
+                pcGrabbable.onRelease = onRelease;
+            }
+            onRelease.AddListener(OnRelease);
+        }
     }
 
     private void OnGrab()
